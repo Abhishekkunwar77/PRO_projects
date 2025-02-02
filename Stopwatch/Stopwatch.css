@@ -1,0 +1,180 @@
+ /* default item haru ko laagi  * sign use hunca */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+ /* yo body ko laagi ho  */
+body {
+    background-color:wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+ /* yo purai stopwatch boc design grna ho */
+.box {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 400px;
+    margin-bottom: 50px;
+}
+ /* yo stopwatch lekheko wala heading  */
+.heading {
+    font-size: 3rem;
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+ /* time ko laagi  */
+#stopwatch {
+    font-size: 3rem;
+    margin: 20px 0;
+    color: #343a40;
+    font-weight: bold;
+}
+ /* button designing grna ko lagi */
+button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+ /* button click  grnu vnda paila  */
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.5), transparent, rgba(255, 255, 255, 0.5));
+    transform: skewX(-30deg);
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+ /* start buttok  ko lagi  */
+button[style*="green"] {
+    background-color: green;
+}
+
+button[style*="green"]:hover {
+    background: linear-gradient(to left, #00b09b, #96c93d);
+}
+
+/* stop button ko laagi  */
+button[style*="crimson"] {
+    background-color: crimson;
+}
+
+button[style*="crimson"]:hover {
+    background: linear-gradient(to left, #ff416c, #ff4b2b);
+}
+
+/* reset grna ko laagi  */
+button[style*="#adb5bd"] {
+    background-color: #adb5bd;
+    color: black;
+}
+
+button[style*="#adb5bd"]:hover {
+    background: linear-gradient(to left, #bdc3c7, #2c3e50);
+    color: white;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px; /* stopwatch ra footer ko bich ma gap */
+}
+
+.foot p {
+    margin-bottom: 10px; /* text ra  icons ko bich ma space */
+    font-size: 1.2rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* social media icons bich ko gap */
+    margin-bottom: 10px; /* Space icon ko tala */
+}
+
+.social-link img {
+    width: 49px; /* social media icon ko size */
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-link:hover img {
+    transform: scale(1.5) rotate(15deg); /* Increased size and slight rotation */
+    filter: brightness(1.5) saturate(1.3);
+    box-shadow: 0 0 20px rgba(239, 234, 234, 0.3);
+    opacity: 0.9;
+}
+
+.social-link {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    border-radius: 50%;
+}
+
+.social-link:hover::after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.social-link:hover {
+    background-color:yellow; /* Light background color on hover */
+}
+
+.social-link:active {
+    transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+.footer p {
+    margin-top: 10px;
+    font-weight: bold italic;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer p:hover {
+    color: #007bff;
+}
+ /* completed */
