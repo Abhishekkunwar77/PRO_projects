@@ -96,16 +96,17 @@ body {
     right: 70px; /* Adjusted position to prevent overlap */
     top: 50%;
     transform: translateY(-50%);
-    background: none;
+    background:none;
     border: none;
     font-size: 20px;
-    color: #888;
+    color: #d41010;
     cursor: pointer;
     display: none;
 }
 
 .clear-btn:hover {
-    color: #fff;
+    color: #ed1515;
+    
 }
 
 .weather-icon {
