@@ -178,3 +178,139 @@ button[style*="#adb5bd"]:hover {
     color: #007bff;
 }
  /* completed */
+ /* responsiveness */
+ /* Responsive Design Using Media Queries */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .box {
+        padding: 30px;
+        min-width: 350px;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    #stopwatch {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+        padding: 12px 25px;
+    }
+
+    .social-link img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+/* For mobile devices (landscape and portrait) */
+@media (max-width: 768px) {
+    .box {
+        padding: 20px;
+        min-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    #stopwatch {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        margin: 8px;
+    }
+
+    .social-link img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For small mobile devices (portrait) */
+@media (max-width: 480px) {
+    .box {
+        padding: 15px;
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    #stopwatch {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+        margin: 6px;
+    }
+
+    .social-link img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+}
+
+/* For very small mobile devices (e.g., iPhone SE) */
+@media (max-width: 320px) {
+    .box {
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    #stopwatch {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+        margin: 4px;
+    }
+
+    .social-link img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer p {
+        font-size: 0.7rem;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+}
