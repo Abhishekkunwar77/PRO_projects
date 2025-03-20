@@ -6,13 +6,18 @@
 }
 
 body {
-    background: linear-gradient(135deg, #39297b, #251f55);
+    background: white;
     color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('Background.png'); /* Replace with your actual image file name */
+    background-size: cover; /* Ensures the image covers the whole background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
+
 
 h1 {
     text-align: center;
@@ -20,28 +25,20 @@ h1 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: -webkit-linear-gradient(left, #ff3929, #ffba00);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glow 2s infinite alternate;
+    color:#FFD700;
+       
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px rgba(255, 57, 41, 0.8);
-    }
-    to {
-        text-shadow: 0 0 20px rgba(255, 186, 0, 1);
-    }
-}
+
+
 
 form {
     width: 90%;
     max-width: 600px;
     margin: auto;
     height: 80px;
-    background: rgba(67, 73, 137, 0.8);
+    background:#333333;
+    border:1px solid white;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -59,16 +56,17 @@ form input {
     border: 0;
     outline: 0;
     background: transparent;
-    color: #fff;
+    color:white;
     font-size: 18px;
     padding: 0 30px;
 }
 
+
 form button {
     padding: 0 40px;
     height: 100%;
-    background: linear-gradient(45deg, #ff3929, #ffba00);
-    color: #fff;
+   background: linear-gradient(to right, #d7d710, #9fe928);
+    color: #333333;
     font-size: 18px;
     border: 0;
     outline: 0;
@@ -89,8 +87,8 @@ form button:hover {
 }
 
 #show-more-btn {
-    background: linear-gradient(45deg, #ff3929, #ffba00);
-    color: white;
+    background-color:#0DCAF0 ;
+    color:#000000;
     border: 0;
     outline: 0;
     padding: 12px 24px;
@@ -135,6 +133,7 @@ form button:hover {
     object-fit: cover;
     border-radius: 8px;
     transition: 0.3s ease-in-out;
+    border:1px solid white;
 }
 
 
@@ -203,13 +202,12 @@ form button:hover {
 
 
 .download-btn:hover {
-    background: #ff3929;
+    background: green;
     color: white;
 }
-
+/* Footer Styles */
 footer {
-    background-color: #39297b;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 20px 0;
     position: relative;
@@ -217,29 +215,57 @@ footer {
     width: 100%;
 }
 
-footer .footer-content {
+.footer-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 footer p {
-    margin: 0;
+    margin: 10px 0;
     font-size: 16px;
 }
 
-footer .social-links {
+/* Social Links Styling */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     margin-top: 10px;
 }
 
-footer .social-links a {
-    color: #fff;
+.social-links a {
+    font-size: 30px; /* Icon size */
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+        color:white;
+
 }
 
-footer .social-links a:hover {
-    text-decoration: underline;
+.social-links a i {
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
+
+
+/* Hover Effects */
+.social-links a:nth-child(1):hover i { color: #0A66C2; transform: scale(1.2); }  /* LinkedIn */
+.social-links a:nth-child(2):hover i { color: #6e5494; transform: scale(1.2); }  /* GitHub */
+.social-links a:nth-child(3):hover i { color: #C13584; transform: scale(1.2); }  /* Instagram */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .social-links a {
+        font-size: 24px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
